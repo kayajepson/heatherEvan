@@ -1,8 +1,17 @@
-// function numberOutput(userInput) {
 
-var numberOutput = function(userInput) {
-  return false;
+function romanNumeral(number) {
+  if (number[0] ==="1"){
+    number = "I";
+    return number;
+  }
 };
+// }  else {
+//     return true;
+//   }
+
+// var romanNumeral = function(number) {
+//     return true;
+//   }
 
 
 
@@ -16,10 +25,10 @@ var numberOutput = function(userInput) {
 $(document).ready(function() {
   $("form#romanNum").submit(function(event) {
     event.preventDefault();
-    var userInput = $("input#arabic").val();
-    var roman = numberOutput(userInput);
+    var number = $("input#romanNumeral").val();
+    var output = romanNumeral(number);
 
-    $("#result").text(numberOutput);
+    $("#result").text(output);
 
   });
 });
