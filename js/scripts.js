@@ -1,85 +1,93 @@
-
+//BACK END BUSINESS
 function romanNumeral(numberInput) {
-
-// var search = numberInput.split("");
-var romanout = "";
+var romanOut = "";
 
 for (var i = numberInput; i > 0; i-=1000) {
   if (numberInput >= 1000){
-    romanout += "M";
+    romanOut += "M";
     numberInput -= 1000;
-
-
     }
   }
+  for (var i = numberInput; i > 0; i-=900) {
+    if (numberInput >= 900){
+      romanOut += "CM";
+      numberInput -= 900;
+      }
+    }
+
 for (var i = numberInput; i > 0; i-=500) {
   if (numberInput >= 500){
-    romanout += "D";
+    romanOut += "D";
     numberInput -= 500;
-
-
     }
   }
+  for (var i = numberInput; i > 0; i-=400) {
+    if (numberInput >= 400){
+      romanOut += "CD";
+      numberInput -= 400;
+      }
+    }
+
 for (var i = numberInput; i > 0; i-=100) {
   if (numberInput >= 100){
-    romanout += "C";
+    romanOut += "C";
     numberInput -= 100;
-
-
     }
   }
+  for (var i = numberInput; i > 0; i-=90) {
+    if (numberInput >= 90){
+      romanOut += "XC";
+      numberInput -= 90;
+      }
+    }
 for (var i = numberInput; i > 0; i-=50) {
   if (numberInput >= 50){
-    romanout += "L";
+    romanOut += "L";
     numberInput -= 50;
-
-
     }
   }
+  for (var i = numberInput; i > 0; i-=40) {
+    if (numberInput >= 40){
+      romanOut += "XL";
+      numberInput -= 40;
+      }
+    }
 for (var i = numberInput; i > 0; i-=10) {
   if (numberInput >= 10){
-    romanout += "X";
+    romanOut += "X";
     numberInput -= 10;
-
-
     }
   }
+  for (var i = numberInput; i > 0; i-=9) {
+    if (numberInput >= 9){
+      romanOut += "IX";
+      numberInput -= 9;
+      }
+    }
+    for (var i = numberInput; i > 0; i-=4) {
+      if (numberInput >= 4){
+        romanOut += "IV";
+        numberInput -= 4;
+        }
+      }
 for (var i = numberInput; i > 0; i-=5) {
   if (numberInput >= 5){
-    romanout += "V";
+    romanOut += "V";
     numberInput -= 5;
-
-
-
     }
   }
   for (var i = numberInput; i > 0; i-=1) {
     if (numberInput >= 1){
-      romanout += "I";
-
-
-
+      romanOut += "I";
       }
     }
-  return romanout;
+  return romanOut;
 }
-// }  else {
-//     return true;
-//   }
-
-// var romanNumeral = function(numberInput) {
-//     return true;
-//   }
 
 
 
 
-
-
-
-
-
-
+//FRONT END BUSINESS
 $(document).ready(function() {
   $("form#romanNum").submit(function(event) {
     event.preventDefault();
