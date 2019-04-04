@@ -64,23 +64,25 @@ for (var i = numberInput; i > 0; i-=10) {
       numberInput -= 9;
       }
     }
-    for (var i = numberInput; i > 0; i-=4) {
-      if (numberInput >= 4){
-        romanOut += "IV";
-        numberInput -= 4;
-        }
-      }
+
 for (var i = numberInput; i > 0; i-=5) {
   if (numberInput >= 5){
     romanOut += "V";
     numberInput -= 5;
     }
   }
+  for (var i = numberInput; i > 0; i-=4) {
+    if (numberInput >= 4){
+      romanOut += "IV";
+      numberInput -= 4;
+      }
+    }
   for (var i = numberInput; i > 0; i-=1) {
     if (numberInput >= 1){
       romanOut += "I";
       }
     }
+
   return romanOut;
 }
 
